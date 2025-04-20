@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="logo">Logo</div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      ```
+</body>
+</html>
+<sytle>
+    .banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1000;
+      }
+      
+      .logo {
+        /* logo styles */
+      }
+      
+      .hamburger {
+        /* hamburger menu styles */
+      }
+      
+      /* Remove background color from banner */
+      .banner {
+        background-color: transparent;
+      }
+      
+      /* Add background color to hamburger menu and logo when scrolled */
+      .scrolled {
+        background-color: black;
+        transition: background-color 0.3s ease;
+      }
+      ```
+</sytle>
+
+<script></script>
+window.addEventListener('scroll', function() {
+  var banner = document.querySelector('.banner');
+  if (window.scrollY > 0) {
+    banner.classList.add('scrolled');
+  } else {
+    banner.classList.remove('scrolled');
+  }
+});
+```
